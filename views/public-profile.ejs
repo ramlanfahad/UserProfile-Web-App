@@ -1,0 +1,53 @@
+<%- include("partials/header") %> 
+
+<% if (username) { %>
+    <!-- <center><h2 id="userprofile">< username %>'s Profile</h2>
+    </center> -->
+    <center><h2 id="userprofile"><%= result.names %>'s Profile</h2>
+    </center>
+
+
+<table class="table">
+
+    <tr>
+        <td>Name:</td>
+        <td ><%= result.names %> </td>
+    </tr>
+
+    <tr>
+        <td>Github:</td>
+        <td ><a class="prolinks" href="<%= result.github  %> "><%= result.github  %> </a></td>
+    </tr>
+
+    <tr>
+        <td>Twitter:</td>
+        <!-- <td>< result.twitter %> </td> -->
+        <td ><a class="prolinks" href="<%= result.twitter  %> "><%= result.twitter  %> </a></td>
+    </tr>
+
+    <tr>
+        <td>Facebbok:</td>
+        <!-- <td>< result.facebook %> </td> -->
+        <td ><a class="prolinks" href="<%= result.facebook  %> "><%= result.facebook  %> </a></td>
+    </tr>
+
+    <tr>
+        <td>LinkedIn:</td>
+        <!-- <td>< result.linkedin %> </td> -->
+        <td ><a class="prolinks" href="<%= result.linkedin  %> "><%= result.linkedin  %> </a></td>
+    </tr>
+
+    <tr>
+        <td>Profession:</td>
+        <td><%= result.profession %> </td>
+    </tr>
+
+   
+
+</table>
+
+<% } %>
+
+
+
+<%- include("partials/footer") %> 

@@ -1,0 +1,25 @@
+<%- include("partials/regheader") %> 
+
+
+
+<form class="form-signin" action="/register" method="POST">
+    
+    <!-- <img class="mb-4" src="images/ten.jfif" alt="" width="90" height="72"> -->
+    <h1 class="h3 mb-3 font-weight-normal">Register Form</h1>
+  
+    <input type="text" name="namess"  class="form-control top" placeholder="Name" required autofocus>
+    
+    <input type="email" name="username" class="form-control middle" placeholder="Email" required>
+    <input type="password" name="password" class="form-control middle" placeholder="Password" required>
+    <input type="password" name="passwordconfirm" class="form-control bottom" placeholder="Password confirm" required>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+    <a href="/">Home</a>
+
+    <p class="mt-5 mb-3 text-muted">&copy;  HAZARD</p>
+  
+ </form>
+
+ 
+
+<%- include("partials/footer") %> 

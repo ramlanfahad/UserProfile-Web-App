@@ -1,0 +1,85 @@
+<%- include("partials/header") %> 
+
+
+
+<a class="btn btn-light btn-lg" href="/logout" role="button">Log Out</a>
+
+<form action="/users" method="POST">
+   <center> <h2 id="userprofile">Edit your Profile</h2></center>
+   
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" value="<%= result.names %>" class="form-control" name="names" id="names">
+    </div>
+
+    <div class="form-group">
+        <label for="github">Github:</label>
+        <input type="text" value="<%= result.github %> " class="form-control" name="github" id="github">
+    </div>
+
+    <div class="form-group">
+        <label for="twitter">Twitter:</label>
+        <input type="text" value="<%= result.twitter %> " class="form-control" name="twitter" id="twitter">
+    </div>
+
+    <div class="form-group">
+        <label for="facebook">Facebook:</label>
+        <input type="text" value="<%= result.facebook %> " class="form-control" name="facebook" id="facebook">
+    </div>
+
+    <div class="form-group">
+        <label for="linkedin">LinkedIn:</label>
+        <input type="text" value="<%= result.linkedin %> " class="form-control" name="linkedin" id="linkedin">
+    </div>
+
+    <div class="form-group">
+        <label for="profession">Profession:</label>
+        <input type="text" value="<%= result.profession %> " class="form-control" name="profession" id="profession">
+    </div>
+
+    <div class="form-group">
+        <label for="status">Status:</label>
+        <select name="status"   id="status">
+         <option value="working"  >Working</option>
+         <option value="not-working">Not-working</option>
+         
+
+        </select>
+        
+        <!-- <input type="text" value="<result.job %> " class="form-control" name="job" id="job"> -->
+    </div>
+
+    <div class="form-group">
+        <label for="job">Current search for:</label>
+        <select class="form-select" name="job"  id="job" aria-label="Default select example">
+            <option value="none" selected>None</option>
+         <option value="internship">Internship</option>
+         <option value="part-time">part-time</option>
+         <option value="full-time">Full-Time</option>
+         
+
+        </select>
+        
+        <!-- <input type="text" value="< result.job %> " class="form-control" name="job" id="job"> -->
+    </div>
+<br>
+    <center>
+   
+        
+    
+        <button class="btnwidth btn btn-primary">Update</button>
+   
+    
+
+    </center>
+  
+
+    
+
+</form>
+<br>
+<center>
+<p><a href="/users/<%= result.username %>" target="_blank">View Profile</a></p>
+</center>
+
+<%- include("partials/footer") %> 

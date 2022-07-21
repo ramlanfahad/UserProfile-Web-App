@@ -1,0 +1,36 @@
+<%- include("partials/header") %> 
+
+<% if (username) { %>
+ <h2><%= username %>'s Profile</h2>
+
+ <a class="btn btn-light btn-lg" href="/logout" role="button">Log Out</a>
+
+<table class="table">
+
+    <tr>
+        <td>Name:</td>
+        <td><%= result.names %> </td>
+    </tr>
+
+    <tr>
+        <td>Github:</td>
+        <td><%= result.github  %> </td>
+    </tr>
+
+    <tr>
+        <td>Twitter:</td>
+        <td><%= result.twitter %> </td>
+    </tr>
+
+    <tr>
+        <td>Facebbok:</td>
+        <td><%= result.facebook %> </td>
+    </tr>
+
+</table>
+
+<% } %>
+
+
+
+<%- include("partials/footer") %> 

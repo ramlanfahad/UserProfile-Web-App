@@ -1,0 +1,50 @@
+<%- include("partials/header") -%>
+
+<!-- <nav>
+    <h4>Node Mysql</h4>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+        <li><a href="/bhome">Blogs</a></li>
+        <li><a href="/about">About-us</a></li>
+        <li><a href="/contact">Contact-us</a></li>
+        <li><a href="/compose">Compose-Blog</a></li>
+    </ul>
+</nav> -->
+
+<nav class="navbar navbar-light navbar-expand-lg"> 
+    <div class="container-fluid">
+    <h4 class="navbar-brand" >ProfileIn</h4>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/register">Create Profile</a></li>
+        <li class="nav-item"><a class="nav-link"  href="/login">Update Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="/bhome">Blogs</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="/about">About-us</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact">Contact-us</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="/compose">Compose-Blog</a></li>
+
+    </ul>
+    </div>
+    </div>
+</nav> 
+
+
+<h1 class="compose">Compose</h1>
+<form action="/compose" method="POST">
+   <div class="form-group"> 
+    <label for="composein">Title</label><br>
+<input class="form-control" type="text" name="composein"  ><br>
+
+<label for="textarea">Post</label><br>
+<textarea class="form-control" rows="5" cols="150" name="textarea"></textarea><br>
+<button class="btn btn-primary" type="submit" value="published">Publish</button>
+</div>
+</form>
+<%- include("partials/footer") -%>

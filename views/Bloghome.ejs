@@ -1,0 +1,56 @@
+<%- include("partials/header") -%>
+
+<!-- <nav>
+    <h4>Node Mysql</h4>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+        <li><a href="/bhome">Blogs</a></li>
+        <li><a href="/about">About-us</a></li>
+        <li><a href="/contact">Contact-us</a></li>
+        <li><a href="/compose">Compose-Blog</a></li>
+    </ul>
+</nav> -->
+
+<nav class="navbar navbar-light navbar-expand-lg"> 
+    <div class="container-fluid">
+    <h4 class="navbar-brand" >ProfileIn</h4>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/register">Create Profile</a></li>
+        <li class="nav-item"><a class="nav-link"  href="/login">Update Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="/bhome">Blogs</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="/about">About-us</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact">Contact-us</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="/compose">Compose-Blog</a></li>
+
+    </ul>
+    </div>
+    </div>
+</nav> 
+
+
+<h1 class="blog-header"> <%="Home" %> </h1>
+
+<p> <%=homedesc%></p>
+
+
+
+<% posts.forEach(post => { %>
+ <%   var lower=  post.title; %>
+ <h1 class="blog-header"><%= post.title %></h1>
+<% var mystring = post.content %>
+<% var truncate= mystring.substring(0,100)+"..."; %>
+ <p><%= truncate %> <a  href="/posts/<%= post._id %>"  >Read more</a></p>   
+
+<%}); %>
+
+
+
+<%- include("partials/footer") -%>
